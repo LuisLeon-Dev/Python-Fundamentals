@@ -42,9 +42,11 @@ user_choice = int(input(
 if user_choice > 2:
     print("Error! Insert a valid option")
 else:
+    print("Your choice: ")
     print(options[user_choice])
 
     cpu_choice = random.randint(0, 2)
+    print("Computer choice: ")
     print(options[cpu_choice])
 
     if user_choice == 2 and cpu_choice == 0:
