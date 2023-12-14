@@ -65,7 +65,7 @@ nr_numbers = int(input(f"How many numbers would you like?\n"))
 password = []
 
 for letter in range(1, nr_letters + 1):
-    random_letter = random.randint(1, len(letters))
+    random_letter = random.randint(0, len(letters) - 1)
     password.append(letters[random_letter])
 
 for symbol in range(1, nr_symbols + 1):
@@ -76,4 +76,5 @@ for number in range(1, nr_numbers + 1):
     random_number = random.randint(0, len(numbers) - 1)
     password.append(numbers[random_number])
 
-print("Your new password:", "".join(password))
+random.shuffle(password)
+print("Passwprd:", "".join(password))
