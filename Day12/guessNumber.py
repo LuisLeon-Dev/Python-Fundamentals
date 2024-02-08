@@ -1,7 +1,5 @@
 import random
-from art import logo
 
-print(logo)
 print("Welcome to the guessing name")
 print("I'm thingin of a number between 1 and 100,")
 
