@@ -19,7 +19,14 @@ colors_list = [
     "aquamarine",
     "DarkSlateBlue",
 ]
+directions = [0, 90, 180, 270]
 
+timy.pensize(5)
+timy.speed(0)
+for _ in range(200):
+    timy.color(random.choice(colors_list))
+    timy.forward(30)
+    timy.setheading(random.choice(directions))
 
 screen = Screen()
 screen.exitonclick()
