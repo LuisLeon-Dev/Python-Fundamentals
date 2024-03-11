@@ -1,32 +1,28 @@
-from turtle import Turtle, Screen
+import turtle as t
 import random
 
-# draw a triangule, square, pentagone, hexagon, heptagon
-# octagon, nonagon and decagon
-timy = Turtle()
 
-colors_list = [
-    "DeepPink",
-    "DarkRed",
-    "coral3",
-    "DarkOrange2",
-    "chartreuse",
-    "CornflowerBlue",
-    "DarkOrchid2",
-    "DarkOliveGreen4",
-    "chocolate",
-    "brown2",
-    "aquamarine",
-    "DarkSlateBlue",
-]
+timy = t.Turtle()
+t.colormode(255)
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+
+    return (r, g, b)
+
+
 directions = [0, 90, 180, 270]
 
 timy.pensize(5)
 timy.speed(0)
+
 for _ in range(200):
-    timy.color(random.choice(colors_list))
+    timy.color(random_color())
     timy.forward(30)
     timy.setheading(random.choice(directions))
 
-screen = Screen()
+screen = t.Screen()
 screen.exitonclick()
